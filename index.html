@@ -1,0 +1,71 @@
+<html lang="pt">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"/>
+        <title>Nada Mais Útil Que o Silêncio – Jogo de Azulejos</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    </head>
+    <body>
+        <div class='progress' id="progress_div">
+            <div class='bar' id='bar1'></div>
+            <div class='percent' id='percent1'></div>
+        </div>
+        <input type="hidden" id="progress_width" value="0">
+
+        <div class="instrucoes">
+            <div class="caixa_instrucoes">
+                <h4>INSTRUÇÕES</h4><br />
+                <ul>
+                    <li>Selecione o bloco desejado e arraste-o para a área de composição;</li>
+                    <li>Clique 2 (duas) vezes para aumentar ou diminuir o tamanho;</li>
+                    <li>Clique com o botão direito para rotacionar no sentido horário;</li>
+                    <li>Clique em LIMPAR para remover todos os blocos.</li>
+
+                </ul>
+            </div>
+            <div class="caixa_comando">
+            </div>
+        </div>
+
+        <div class="azulejos">
+            <img alt="1" src="img/bloco_azulejos/1.jpg">
+            <img alt="2" src="img/bloco_azulejos/2.jpg">
+            <img alt="3" src="img/bloco_azulejos/3.jpg">
+            <img alt="4" src="img/bloco_azulejos/4.jpg">
+            <img alt="6" src="img/bloco_azulejos/6.jpg">
+            <img alt="7" src="img/bloco_azulejos/7.jpg">
+            <img alt="8" src="img/bloco_azulejos/8.jpg">
+            <img alt="9" src="img/bloco_azulejos/9.jpg">
+
+            <img alt="1" src="img/bloco_frase/1.jpg">
+            <img alt="2" src="img/bloco_frase/2.jpg">
+            <img alt="3" src="img/bloco_frase/3.jpg">
+            <img alt="6" src="img/bloco_frase/6.jpg">
+            <img alt="8" src="img/bloco_frase/8.jpg">
+            <img alt="9" src="img/bloco_frase/9.jpg">
+
+            <img alt="1" src="img/bloco_cor/1.jpg">
+            <img alt="2" src="img/bloco_cor/2.jpg">
+            <img alt="3" src="img/bloco_cor/3.jpg">
+            <img alt="4" src="img/bloco_cor/4.jpg">
+            <img alt="5" src="img/bloco_cor/5.jpg">
+            <img alt="6" src="img/bloco_cor/6.jpg">
+        </div>
+
+        <div id="canvas"></div>
+
+        <div class="menu">
+            <button id="info">Instruções</button>
+            <button id="limpar">Limpar</button>
+        </div>
+
+    </body>
+
+    <script src="script.js"></script>
+
+</html>

@@ -1,0 +1,173 @@
+@charset "UTF-8";
+@import url("https://use.typekit.net/bns2jbl.css");
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: din-2014, sans-serif;
+}
+
+button {
+    font-size: calc((1 - 1) * 1.2vw + 1rem);
+    font-family: din-2014, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.progress {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 5px;
+    z-index: 9999;
+}
+
+.bar { 
+    background-color: #55bdbd; 
+    width:0%; 
+    height:100%; 
+}
+
+
+.azulejos {
+    width: 100%;
+    padding: .35%;
+    box-sizing: border-box;
+    display: inline-block;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 2px solid #000;
+}
+
+#canvas {
+    width: 100%;
+    height: 85%;
+    background-color: hsl(0, 14%, 96%);
+}
+
+.menu {
+    position: absolute;
+    width: 100%;
+    height: 7%;
+    z-index: 1000000;
+    top: 93vh;
+    border-top: 2px solid #000;
+}
+
+button {
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border: none;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    float: left;
+}
+
+button:not(:first-of-type) {
+    border-left: 2px solid #000;
+}
+
+button:hover {
+    background: #000!important;
+    color: #fff!important;
+    transition: all .25s ease!important;
+
+}
+
+
+.azulejos img {
+    box-sizing: border-box;
+    padding: .25%;
+    width: 5%;
+    float: left;
+    cursor: move;
+    z-index: 1000;
+    transition: all .2s ease;
+
+}
+
+.azulejos img:hover {
+    transform: scale(0.8);
+    transition: all .35s ease;
+}
+
+#canvas img {
+    box-sizing: border-box;
+    width: 7%;
+    cursor: move;
+    z-index: 1000;
+}
+
+.dobro {
+    width: 14%!important;
+    max-width: 14%!important;
+}
+
+.instrucoes {
+    position: absolute;
+    background: #fff;
+    width: 350px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: .4em;
+    border: 2px solid #000;
+    z-index: 10000000000000;
+    word-wrap: break-word;
+    left: 0; 
+    right: 0; 
+    top:30%;
+    margin-left: auto; 
+    margin-right: auto; 
+    box-shadow: 7px 7px #595957;
+}
+
+
+.caixa_instrucoes ul {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+.caixa_instrucoes ul li {
+    margin-bottom: .5em;
+}
+
+.caixa_instrucoes {
+    width: 85%;
+    float: left;
+    overflow: hidden;
+
+}
+
+.caixa_comando {
+    width: 15%;
+    float: left;
+    text-align: right;
+
+}
+
+.caixa_comando::after {
+    content: "✕";
+}
+
+.caixa_comando:hover {
+    cursor: pointer;
+    color: #55bdbd;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+    #azulejos {
+        display: none;
+    }
+
+    body * {
+        display: none;
+    }
+
+    body::after {
+        content: 'Acesse em um desktop.';
+    }
+}
